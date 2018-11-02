@@ -1,0 +1,89 @@
+.container {
+
+    max-width: 120rem;
+    box-shadow: var(--shadow-dark);
+    margin: 8rem auto;
+    background-color: var(--color-grey-light-1);
+    min-height: 50rem;
+}
+
+
+.header {
+
+    font-size: 1.4rem; // 14px
+    min-height: 7rem;
+    background-color: #fff;
+    border-bottom: var(--line);
+    
+    // Flex Property
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; // Vertically put element in center  
+}
+
+
+.content { 
+
+    display: flex;
+
+}
+
+.sidebar {
+
+    background-color:  var(--color-grey-dark-1);
+    /*
+        flex: 0 0 18%;  shorthand notation of below flex property
+        It mean flex-grow : 0 we do not want element to grow beside the width of element that we define
+                flex-shrink : 0; we also do not want to shrink
+                flex-basis : 18% This defines the default size of an element before the remaining space is distributed
+    */
+    flex: 0 0 18%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+
+.hotel-view {
+
+    background-color: #fff;
+
+    /*
+        flex: 1; shorthand notation of flex: 1 0 0;
+        This mean flex-grow : 1 that mean take the entire remaining space
+        We can  
+    */
+    flex: 1;
+}
+
+
+.detail {
+    
+    font-size: 1.4rem; // Now all elements of detail i.e. 'description' and  'user-reviews' will inherit this font-size
+    display: flex;
+    padding: 4.5rem;
+    background-color: var(--color-grey-light-1);
+    border-bottom: var(--line);
+}
+
+.description {
+
+    
+    background-color:#fff;
+    box-shadow: var(--shadow-light);
+    padding:3rem;
+    flex: 0 0 60%;
+    margin-right: 4.5rem;
+}
+
+.user-reviews {
+   
+   flex: 1;
+
+    // to center the 'show all' button    
+   display: flex;
+   flex-direction: column;
+   align-items:center;
+
+   // Why not use test-align:center because it will effect the text of all child element. You can see effect inside the 'review__text' element
+}

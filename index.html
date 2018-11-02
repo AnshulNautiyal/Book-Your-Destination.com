@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        
+        <title>My Destinaton Booking</title>
+    </head>
+    <body>
+        
+        <div class="container">
+
+            <!-- Header Section -->
+            <header class="header">
+
+                <img src="img/logo.png" alt="Trillo Logo" class="logo">
+
+                <form action="#" class="search">
+                    <input type="text" class="search__input" placeholder="Search Hotels">
+                    <button class="search__button">
+                         <svg class="search__icon">
+                             <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+                         </svg>
+                    </button>
+                </form>
+
+                <nav class="user-nav">
+
+                    <div class="user-nav__icon-box">
+                        <svg class="user-nav__icon">
+                            <use xlink:href="img/sprite.svg#icon-bookmark"></use>
+                        </svg>
+                        <span class="user-nav__notification">
+                            7
+                        </span>
+                    </div>
+
+                    <div class="user-nav__icon-box">
+                        <svg class="user-nav__icon">
+                            <use xlink:href="img/sprite.svg#icon-chat"></use>
+                        </svg>
+                        <span class="user-nav__notification">
+                            13
+                        </span>
+                        
+                    </div>
+
+                    <div class="user-nav__user">
+                        <img src="img/user.jpg" alt="" class="user-nav__user-photo">
+                        <span class="user-nav__user-name">
+                            Anshul Nautiyal
+                        </span>
+                    </div>
+                </nav>
+            </header>
+
+
+            <!-- Sidebar + main + section  -->
+            <div class="content">
+                <!-- sidebar section -->
+                <nav class="sidebar">
+                    
+                    <ul class="side-nav">
+                        <li class="side-nav__item side-nav__item--active">
+                            <a href="#" class="side-nav__link">
+                                <svg class="side-nav__icon">
+                                    <use xlink:href="img/sprite.svg#icon-home"></use>
+                                </svg>
+                                <span>Hotel</span>
+                            </a>
+                        </li>
+
+                        <li class="side-nav__item">
+                            <a href="#" class="side-nav__link">
+                                <svg class="side-nav__icon">
+                                    <use xlink:href="img/sprite.svg#icon-aircraft-take-off"></use>
+                                </svg>
+                                <span>Flight</span>
+                            </a>
+                        </li>
+
+                        <li class="side-nav__item">
+                            <a href="#" class="side-nav__link">
+                                <svg class="side-nav__icon">
+                                    <use xlink:href="img/sprite.svg#icon-key"></use>
+                                </svg>
+                                <span>Car Rental</span>
+                            </a>
+                        </li>
+
+                        <li class="side-nav__item">
+                            <a href="#" class="side-nav__link">
+                                <svg class="side-nav__icon">
+                                    <use xlink:href="img/sprite.svg#icon-map"></use>
+                                </svg>
+                                <span>Tours</span>
+                            </a>
+                        </li> 
+
+                    </ul>
+
+                    <div class="legal">
+                        &copy; 2017 by Anshul Nautiyal. All rights reserved.
+                    </div>
+                </nav>
+
+                <!-- main section   -->
+                <main class="hotel-view">
+
+                    <!-- Image Section -->
+                    <div class="gallery">
+
+                        <figure class="gallery__item">
+                            <img src="img/hotel-1.jpg" alt="Hotel 1" class="gallery__photo">
+                        </figure>
+
+                        <figure class="gallery__item">
+                            <img src="img/hotel-2.jpg" alt="Hotel 2" class="gallery__photo">
+                        </figure>
+
+                        <figure class="gallery__item">
+                            <img src="img/hotel-3.jpg" alt="Hotel 3" class="gallery__photo">
+                        </figure>
+
+                    </div>
+
+                    <!-- Rating Section -->
+                    <div class="overview">
+                        <h1 class="overview__heading">
+                            Hotel Softel Plaza
+                        </h1>
+
+                        <div class="overview__stars">
+                            <svg class="overview__icon-star">
+                                <use xlink:href="img/sprite.svg#icon-star"></use>
+                            </svg>
+
+                            <svg class="overview__icon-star">
+                                <use xlink:href="img/sprite.svg#icon-star"></use>
+                            </svg>
+
+                            <svg class="overview__icon-star">
+                                <use xlink:href="img/sprite.svg#icon-star"></use>
+                            </svg>
+
+                            <svg class="overview__icon-star">
+                                <use xlink:href="img/sprite.svg#icon-star"></use>
+                            </svg>
+
+                            <svg class="overview__icon-star">
+                                <use xlink:href="img/sprite.svg#icon-star"></use>
+                            </svg>
+                        </div>
+
+                        <div class="overview__location">
+                            <svg class="overview__icon-location">
+                                <use xlink:href="img/sprite.svg#icon-location-pin"></use>
+                            </svg>
+
+                            <button class="btn-inline">
+                                Dehdradun, IN
+                            </button>
+                        </div>
+
+                        <div class="overview__rating">
+                            <div class="overview__rating-average">
+                                8.6
+                            </div>
+                            <div class="overview__rating-count">437 votes</div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Hotel Middle Description -->
+
+                    <div class="detail">
+                        <div class="description">
+                            <p class="paragraph">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi nisi dignissimos debitis ratione sapiente saepe.
+                                Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate.
+                            </p>
+                            <p class="paragraph">
+                                Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate delectus, inventore iure aliquid
+                                aliquam.
+                            
+                            </p>
+
+                            <ul class="list">
+                                <li class="list__item">Close to beach</li>
+                                <li class="list__item">BreakFast Include</li>
+                                <li class="list__item">Free Airport Shuttle</li>
+                                <li class="list__item">Free WI-FI in all room</li>
+                                <li class="list__item">Pets are allowed</li>
+                                <li class="list__item">Air conditioning and heating</li>
+                                <li class="list__item">Helicopter Tour</li>
+                                <li class="list__item">Perfect for Families</li>
+
+                            </ul>
+
+                            <div class="recommend">
+                                <p class="recommend__count">
+                                    Vimal and 3 other friends recommend this hotel.
+                                </p>
+                                <div class="recommend__friends">
+                                    <img src="img/user-3.jpg" alt="User 3" class="recommend__photo">
+                                    <img src="img/user-4.jpg" alt="User 4" class="recommend__photo">
+                                    <img src="img/user-5.jpg" alt="User 5" class="recommend__photo">
+                                    <img src="img/user-6.jpg" alt="User 6" class="recommend__photo">
+
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <!-- USER Review Section -->
+                        <div class="user-reviews">
+                            
+                            <!-- User 1 Rating -->
+                            <figure class="review">
+
+                                <blockquote class="review__text">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                                    Fuga doloremque architecto dicta animi, totam, itaque officia
+                                    ex.
+                                </blockquote>
+
+                                <div class="review__user">
+                                    
+                                    <img src="img/user-3.jpg" alt="User 1" class="review__photo">
+                                    <div class="review__user-box">
+                                        <p class="review__user-name">Vimal Singh</p>
+                                        <p class="review__user-date">27 Oct, 2018</p>
+                                    </div>
+
+                                    <div class="review__rating">7.9</div>
+                                </div>
+                            </figure>
+
+                            <!-- User 2 Rating -->
+                            <figure class="review">
+                            
+                                <blockquote class="review__text">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta animi.
+                                </blockquote>
+                            
+                                <div class="review__user">
+                            
+                                    <img src="img/user-4.jpg" alt="User 1" class="review__photo">
+                                    <div class="review__user-box">
+                                        <p class="review__user-name">Avinash Yadav</p>
+                                        <p class="review__user-date">12 Nov, 2018</p>
+                                    </div>
+                            
+                                    <div class="review__rating">9.0</div>
+                                </div>
+                            </figure>
+
+                            <button class="btn-inline">Show all <span>&rarr;</span></button>
+
+                        </div>
+                        <!-- END -->
+                    </div>
+
+                    <!-- Booking button Section -->
+                    <div class="cta">
+                        <h2 class="cta__book">
+                            Good news! We have 4 new rooms for your selected dates!
+                        </h2>
+                        <button class="btn">
+                            <span class="btn__visible">Book Now</span>
+                            <span class="btn__invisible">Only 4 rooms left </span>
+                            
+                        </button>
+                    </div>
+
+                </main>
+            </div>
+
+
+
+        </div>
+        <!-- CONTAINER -->
+    </body>
+</html>

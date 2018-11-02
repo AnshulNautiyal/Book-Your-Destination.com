@@ -1,0 +1,85 @@
+
+
+/*
+    Now instead of SASS variable, we use CSS variable as they can do same thing as SASS variable also can be inherited and manipulated 
+    by javaScript. Also we can edit them in devTools. 
+    CSS variable are defined with the block (curly bracket). We can put CSS variable in any selector but the that variable can only be accessible
+    inside that block only and also its children. So it is good practice to define the variable inside the root block 
+    (declaration block) so that they are available in one central place and can be access any where from the page.
+    So we use root pseudo class for CSS variable. We can use html selector but since root pseudo have high priority then html so we will
+    sue root pseudo class. So variables define inside the root selector are become global and the accessible inside the child element.
+*/
+:root {
+
+    --color-primary:  #eb2f64; // this is how we define custom property / CSS variable.
+    --color-primary-light: #FF3366;
+    --color-primary-dark: #BA265D;
+
+    --color-grey-light-1: #faf9f9;
+    --color-grey-light-2: #f4f2f2;
+    --color-grey-light-3: #f0eeee;
+    --color-grey-light-4: #ccc;
+
+    --color-grey-dark-1: #333;
+    --color-grey-dark-2: #777;
+    --color-grey-dark-3: #999;
+
+    --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .3);
+    --shadow-light:0 2rem 5rem rgba(0,0,0,.2);
+
+    --line: 1px solid var(--color-grey-light-2);
+
+
+}
+
+
+
+
+// This is complete Global Reset setting
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+/*  Here i set box-sizing as border-box so that child element can inherit it.
+    Refer : POINT:1:
+*/
+ html{
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+ }
+/*
+    Now as per POINT:1: we want all element should inherit box-sizing property 
+    which i used in html tag.
+*/
+*,
+*::after,
+*::before {
+
+    box-sizing: inherit;
+}
+// End of  Global Reset setting
+
+
+body {
+    // Tell browser to use google 'Open Sans' font as we import it in HTML but if browser fail to load then use 'sans-serif' font
+    font-family: 'Open Sans', sans-serif;
+    background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--color-grey-dark-2);
+    // right now there is no height given to body, so it will be small hight at top of page.
+    // So let give it height;
+    min-height: 100vh;
+    /*
+        Why min-height instead of height is because we want as we add more and more component in the page this pink background
+        should also increase. If we use height property only then only the device screen is pink background and if we scroll down
+        then it will not be pink back-ground instead of that it will be white back-ground.
+        SIMPLE WORD: if page is bigger then the screen size then pink back-ground should also increase.
+
+        Also why vh instead of px or % because as we decrease browser size , we want that pink color should be visible in 100% of current 
+        browser/device size;
+    */
+}
+
