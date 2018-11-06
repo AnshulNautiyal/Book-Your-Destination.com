@@ -1,6 +1,6 @@
 # Book Your Destinaton
 
-Prerequisite: Download NodeJS in your system.
+**Prerequisite:** Download NodeJS in your system.
 
 1. Clone/Download the code.
 2. Navigate inside the root folder.
