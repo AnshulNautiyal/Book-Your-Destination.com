@@ -32,7 +32,24 @@
 
 }
 
+// bp stands for breakpoint
+// we can not use CSS variable as CSS do not allow CSS variable to work on media query.
+// So we will use  SASS variable. 
 
+// 1200/16 = 75px or 75em
+$bp-largest: 75em; // 1200px
+
+// 1100/16 = 68.75px or 68.75em
+$bp-large: 68.75em; // 1100px
+
+// 900/16 = 56.25px or 56.25em
+$bp-medium: 56.25em; // 900px
+
+// 600/16 = 37.5px or 37.5em
+$bp-small: 37.5em; // 600px
+
+// 500/16 = 31.25px or 31.25em
+$bp-smallest: 31.25em; // 500px
 
 
 // This is complete Global Reset setting
@@ -48,6 +65,13 @@
  html{
     box-sizing: border-box;
     font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+
+    // MEDIA QUERY
+    @media only screen and (max-width: $bp-large){
+        // right now the font-size is 10px that is 1rem. Let's make it 8px which 8/16  = 50%
+        font-size: 50%;
+        
+    }
  }
 /*
     Now as per POINT:1: we want all element should inherit box-sizing property 

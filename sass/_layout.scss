@@ -5,6 +5,13 @@
     margin: 8rem auto;
     background-color: var(--color-grey-light-1);
     min-height: 50rem;
+
+    // MEDIA QUERY 
+    @media only screen and (max-width: $bp-largest) {
+        margin: 0;   
+        max-width: 100%;
+        width: 100%;
+    }
 }
 
 
@@ -18,13 +25,28 @@
     // Flex Property
     display: flex;
     justify-content: space-between; 
-    align-items: center; // Vertically put element in center  
+    align-items: center; // Vertically put element in center 
+    
+    @media only screen and (max-width:$bp-smallest){
+        flex-wrap: wrap; // Refer :POINT 101: in component file. Using flex wrap we are allowing flex items to wrap in 
+                        //  new line if enough space is not available in flex container which is header.
+
+        height: 11rem;  // Also, give header container a height because search box now come in 2nd row because of above property.
+                        // so it header require more space or you can say more height
+
+        align-content: space-around; // align-content is used to provide space between the row in the container.
+    }
 }
 
 
 .content { 
 
     display: flex;
+
+    @media only screen and (max-width:$bp-medium){
+        flex-direction:column;
+        
+    }
 
 }
 
@@ -64,6 +86,17 @@
     padding: 4.5rem;
     background-color: var(--color-grey-light-1);
     border-bottom: var(--line);
+
+    /*
+        If we have 2 media query then we put first the large screen media query and then the small one.
+    */
+    @media only screen and (max-width:$bp-medium){        
+        padding: 3rem;
+    }
+
+    @media only screen and (max-width:$bp-small){        
+        flex-direction: column;
+    }
 }
 
 .description {
@@ -74,6 +107,16 @@
     padding:3rem;
     flex: 0 0 60%;
     margin-right: 4.5rem;
+    
+    @media only screen and (max-width:$bp-medium){        
+        padding: 2rem;
+        margin-right: 3rem;
+    }
+
+    @media only screen and (max-width:$bp-small){        
+        margin-right: 0;
+        margin-bottom: 3rem;
+    }
 }
 
 .user-reviews {

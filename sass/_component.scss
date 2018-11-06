@@ -21,6 +21,14 @@
     align-items:center;
     justify-content: center;
 
+    @media only screen and (max-width:$bp-smallest){
+        // :POINT 101:
+        flex: 0 0 100%;
+        order: 1; // flex property. Initially all flex items have same oder i.e 0 but we want search box to come at the end of all flex
+                  // items. So we make its order equal to 1. and then search box will take the complete space using above flex property.
+        background-color: var(--color-grey-light-2);
+    }
+
 
     &__input {
 
@@ -48,7 +56,7 @@
 
         &::-webkit-input-placeholder {
              font-weight: 100;
-             color: var(--color-grey-light-4);
+             color: var(--color-grey-dark-3);
         }
     }
 
@@ -161,12 +169,25 @@
     margin-top: 3.5rem;
 
 
+    @media only screen and (max-width:$bp-medium){
+        display: flex;
+        margin: 0;
+    }
+
     &__item {
         
         position: relative;
 
         &:not(:last-child){
             margin-bottom: .5rem;
+
+            @media only screen and (max-width:$bp-medium){
+                margin-bottom: 0;
+            }
+        }
+
+        @media only screen and (max-width:$bp-medium){
+            flex: 1;
         }
         
     }
@@ -225,6 +246,17 @@
 
         display: flex;
         align-items: center; // center element vertically
+
+
+        @media only screen and (max-width:$bp-medium){
+            justify-content: center; // horizontally align the item in center
+            padding: 2rem;
+        }
+
+        @media only screen and (max-width:$bp-small){
+            flex-direction:column;
+            padding: 1.5rem .5rem;
+        }
     }
 
     &__icon {
@@ -233,6 +265,11 @@
         width: 1.75rem;
         margin-right: 2rem;
         fill: currentColor;  // currentColor is basically the color of current element or parent element
+
+        @media only screen and (max-width:$bp-small){
+            margin-right: 0;
+            margin-bottom: .7rem;
+        }
     }
 }
 
@@ -246,6 +283,9 @@
     text-align: center;
     padding:2.5rem;
 
+    @media only screen and (max-width:$bp-medium){
+        display: none;
+    }
 }
 
 /////////////////////////////////////////////
@@ -289,6 +329,11 @@
         letter-spacing: 1px;
         text-transform: uppercase;
         padding:1.5rem 3rem;
+
+        @media only screen and (max-width:$bp-small){
+            font-size: 1.8rem;
+            padding: 1.25rem 2rem;
+        }
 
     }
 
@@ -349,7 +394,9 @@
         justify-content:center;
         align-items:center;
 
-        
+        @media only screen and (max-width:$bp-small){
+            padding: 0 1.5rem;
+        }
 
     }   
 
@@ -358,6 +405,10 @@
         font-size: 2.25rem;
         font-weight: 700;
         margin-bottom: -.3rem;
+
+        @media only screen and (max-width:$bp-small){
+            font-size:  1.8rem;
+        }
     }
 
     &__rating-count {
@@ -365,6 +416,10 @@
         font-size: 1rem;
         font-weight: 900;
         text-transform: uppercase;
+
+        @media only screen and (max-width:$bp-small){
+            font-size:  .5rem;
+        }
     }
 }
 
@@ -466,22 +521,28 @@
         */
 
         // For older browser
-        // background-image: url(../img/chevron-thin-right.svg);
-        // background-size: cover;
+        background-image: url(../img/chevron-thin-right.svg);
+        background-size: cover;
 
 
-        // For Newer Browser: use 'mask'
-        background-color:var(--color-primary);
-        -webkit-mask-image: url(../img/chevron-thin-right.svg); // Similar to background-image
-        -webkit-mask-size: cover; // Similar to background-size
+        @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+            // For Newer Browser: use 'mask'
+            background-color:var(--color-primary);
+            -webkit-mask-image: url(../img/chevron-thin-right.svg); // Similar to background-image
+            -webkit-mask-size: cover; // Similar to background-size
 
-        // When  all browser start supporting mask property
-        mask-image: url(../img/chevron-thin-right.svg); // Similar to background-image
-        mask-size: cover;
+            // When  all browser start supporting mask property
+            mask-image: url(../img/chevron-thin-right.svg); // Similar to background-image
+            mask-size: cover;
 
-        /*
-            WHat is mask? See youtube video 
-        */
+            background-image: none; // if mask image property supported then the background-image which we defined for older 
+                                    // browser should be remove.
+
+            /*
+                WHat is mask? See youtube video 
+            */
+        }
+        
 
     }
     
@@ -505,7 +566,7 @@
     }
 
     &__friends {
-
+        display: flex;
     }
 
     &__photo {
@@ -514,7 +575,7 @@
         height: 4rem;
         border-radius: 50%;
         &:not(:last-child) {
-            margin-right: -1.5rem;
+            margin-right: -2rem;
         }
         
         border: 3px solid #fff;    
@@ -540,6 +601,11 @@
     padding: 3rem;
     margin-bottom: 3.5rem;
     overflow: hidden; // Since big double qoute is overflowing out of the box
+
+    @media only screen and (max-width:$bp-medium){        
+        padding: 2rem;
+        margin-bottom: 3rem;
+    }
 
     //SEE :POINT 4:
     position: relative;
@@ -619,6 +685,11 @@
 .cta {
     padding: 3.5rem 0;
     text-align: center;
+
+    @media only screen and (max-width:$bp-medium){        
+        padding: 2.5rem 0;
+    
+    }
 
     &__book {
         font-size: 2rem;
