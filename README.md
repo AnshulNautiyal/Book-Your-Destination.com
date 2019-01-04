@@ -8,8 +8,7 @@
 4. Once download complete, run 'npm run start'.
 5. This will apply the changes made in SASS code every time the SASS file will update. AND also it will refresh the browser on every save.
 
-*Use this website as the way you want. Help me to improve it. I am always in my learning phase.Your help will help 
-me to learn more.*
+*Use this website as the way you want. Help me to improve it.*
 
 
 ![](HotelBooking.gif)
